@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PanierfrontofficeController">
+   <children>
+      <AnchorPane layoutX="1060.0" prefHeight="720.0" prefWidth="220.0" style="-fx-background-color: #101010;">
+         <children>
+            <Button layoutX="51.0" layoutY="119.0" mnemonicParsing="false" onAction="#btn_btq" prefHeight="36.0" prefWidth="119.0" text="Boutique" />
+            <Button layoutX="51.0" layoutY="271.0" mnemonicParsing="false" onAction="#btn_pn" prefHeight="36.0" prefWidth="119.0" text="Panier" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="pn_boutique" layoutX="6.0" layoutY="1.0" prefHeight="720.0" prefWidth="1053.0" style="-fx-background-color: #202020;">
+         <children>
+            <Label layoutX="11.0" layoutY="13.0" prefHeight="54.0" prefWidth="181.0" text="Boutique" textFill="#e4e0e0">
+               <font>
+                  <Font name="Segoe UI Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="265.0" prefHeight="47.0" prefWidth="148.0" text="Trotinette t500" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="312.0" prefHeight="17.0" prefWidth="82.0" text="500 dinar" textFill="WHITE" />
+            <Label layoutX="322.0" layoutY="265.0" prefHeight="47.0" prefWidth="148.0" text="Trotinette t900" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="312.0" prefHeight="17.0" prefWidth="82.0" text="900 dinar" textFill="WHITE" />
+            <Button layoutX="28.0" layoutY="344.0" mnemonicParsing="false" onAction="#ajouter1" text="Ajouter" />
+            <Button layoutX="322.0" layoutY="343.0" mnemonicParsing="false" onAction="#ajouter2" text="Ajouter" />
+         </children>
+      </Pane>
+      <Pane fx:id="pn_panier" prefHeight="720.0" prefWidth="1053.0" style="-fx-background-color: #202020;">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" prefHeight="54.0" prefWidth="181.0" text="Panier" textFill="#e4e0e0">
+               <font>
+                  <Font name="Segoe UI Bold" size="37.0" />
+               </font>
+            </Label>
+            <TableView fx:id="display" layoutX="26.0" layoutY="76.0" prefHeight="459.0" prefWidth="887.0">
+              <columns>
+                <TableColumn fx:id="nom" prefWidth="245.0" text="Produit" />
+                <TableColumn fx:id="prix" prefWidth="291.0" text="Prix unitaire" />
+                  <TableColumn fx:id="qty" prefWidth="241.0" text="Quantite" />
+                  <TableColumn fx:id="edit" prefWidth="105.0" text="Option" />
+                  <TableColumn fx:id="id" prefWidth="105.0" text="id" />
+              </columns>
+            </TableView>
+            <Button layoutX="828.0" layoutY="643.0" mnemonicParsing="false" onAction="#refresh" prefHeight="32.0" prefWidth="82.0" text="Actualiser" />
+            <Button layoutX="62.0" layoutY="643.0" mnemonicParsing="false" onAction="#valider" prefHeight="32.0" prefWidth="90.0" text="Valider" />
+            <TextField fx:id="tf_adresse" layoutX="59.0" layoutY="595.0" prefHeight="26.0" prefWidth="308.0" style="-fx-background-color: white;" />
+            <Label layoutX="62.0" layoutY="561.0" prefHeight="18.0" prefWidth="119.0" style="-fx-background-color: white;" text="Adresse livraison" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
