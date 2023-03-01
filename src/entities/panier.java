@@ -7,7 +7,7 @@ package entities;
 
 /**
  *
- * @author ABDOU
+ * @author mikhail
  */
 public class panier {
     private int id_panier ; 

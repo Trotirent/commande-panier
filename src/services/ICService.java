@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author ABDOU
+ * @author mikhail
  */
 public interface ICService <T>{
     public void Ajouter(T t);

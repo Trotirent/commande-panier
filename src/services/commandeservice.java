@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  *
- * @author ABDOU
+ * @author mikhail
  */
 public class commandeservice implements ICService <Commande>  {
     

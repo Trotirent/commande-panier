@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author ABDOU
+ * @author mikhail
  */
 public class main extends Application 
 {
@@ -28,7 +28,7 @@ public class main extends Application
     public void start(Stage primaryStage) throws IOException
     {
         this.stg = primaryStage;
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("../gui/commandebackoffice.fxml"));
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("../gui/panierfrontoffice.fxml"));
         Parent root= loader.load();
         Scene scene= new Scene(root);
         primaryStage.minWidthProperty().bind(scene.heightProperty().multiply(2));

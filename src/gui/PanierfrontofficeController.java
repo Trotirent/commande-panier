@@ -39,12 +39,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 import entities.Commande;
+import entities.MailSender;
 import services.commandeservice;
 
 /**
  * FXML Controller class
  *
- * @author ABDOU
+ * @author mikhail
  */
 public class PanierfrontofficeController implements Initializable {
 
@@ -55,7 +56,7 @@ public class PanierfrontofficeController implements Initializable {
     
     panierservice sp = new panierservice();
     commandeservice sc = new commandeservice(); 
-    
+    String mail="mikhail.mannai@esprit.tn";
     @FXML
     private TableView<panier> display;
     @FXML
@@ -228,7 +229,11 @@ public class PanierfrontofficeController implements Initializable {
         Commande t = new Commande(1,total,listp,adresse);
         System.out.println(total);
         sc.Ajouter(t);
-        
+        try {
+            MailSender.sendMail(mail);
+        } catch (Exception ex) {
+            Logger.getLogger(PanierfrontofficeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
    

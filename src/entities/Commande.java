@@ -9,7 +9,7 @@ import java.util.Objects;
 
 /**
  *
- * @author ABDOU
+ * @author mikhail
  */
 public class Commande {
     private int id_commande; 
